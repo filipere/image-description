@@ -1,0 +1,13 @@
+server:
+  port: "${MS_PORT:8081}"
+
+spring:
+  google:
+    cloud:
+      vision:
+        api-key: ${GOOGLE_CLOUD_VISION_API_KEY}
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
