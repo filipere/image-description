@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping("/ai/images")
+@RequestMapping("/ai")
 public class ImageDescriptionController {
 
     private final ImageDescriptionService service;
@@ -22,7 +22,7 @@ public class ImageDescriptionController {
         this.service = service;
     }
 
-    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/upload-images", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<ImageDescriptionResponse> analyzeImage(@RequestParam("image") MultipartFile image) {
         try {
             // Chama o serviço para analisar a imagem
